@@ -8,7 +8,7 @@ api = Api(app)
 todos = {}
 
 
-class TdoSimple(Resource):
+class TodoSimple(Resource):
     def get(self, todo_id):
         # return {todo_id: todos[todo_id]}
         return {todo_id: todos.get(todo_id)}
@@ -17,7 +17,7 @@ class TdoSimple(Resource):
         todos[todo_id] = request.form["data"]
         return {todo_id: todos.get(todo_id)}
 
-api.add_resource(HelloWorld, "/")
+api.add_resource(TodoSimple, "/<string:todo_id>")
 
 
 if __name__ == "__main__":
