@@ -12,4 +12,7 @@ api.add_resource(HelloWorld, "/")
 
 
 if __name__ == "__main__":
+    # access api by
+    # localhost:5000
+    # e.g. curl http://localhost:5000
     app.run(debug=True)
