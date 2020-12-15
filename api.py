@@ -9,8 +9,9 @@ todos = {}
 
 
 class TdoSimple(Resource):
-    def get(self):
-        return {"Hello": "World"}
+    def get(self, todo_id):
+        # return {todo_id: todos[todo_id]}
+        return {todo_id: todos.get(todo_id)}
 
 api.add_resource(HelloWorld, "/")
 
