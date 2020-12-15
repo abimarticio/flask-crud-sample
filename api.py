@@ -8,7 +8,7 @@ api = Api(app)
 todos = {}
 
 
-class HelloWorld(Resource):
+class TdoSimple(Resource):
     def get(self):
         return {"Hello": "World"}
 
