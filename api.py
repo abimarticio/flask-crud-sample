@@ -4,6 +4,10 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 
+
+todos = {}
+
+
 class HelloWorld(Resource):
     def get(self):
         return {"Hello": "World"}
